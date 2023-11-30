@@ -28,6 +28,7 @@ isSameOrAfter(date: Time | string)
 isBetween(startDate: Time | string, endDate: Time | string, rule: "()" | "(]" | "[)" | "[]")
 diff(date: Time | string, unit: "minutes" | "days" | "months" | "years")
 clone()
+format(rule: "YYYYMMDD" | "DDMMYYYY" | "YYMMDD" | "DDMMYY", separator?: "" | "-" | "/")
 ```
 
 ### Example
