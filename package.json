@@ -1,0 +1,41 @@
+{
+  "name": "@davidrebollo92/time",
+  "version": "0.1.0",
+  "description": "Extended version of Date",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidrebollo92/time.git"
+  },
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "parcel build",
+    "prepublish": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "date",
+    "time"
+  ],
+  "author": "David Rebollo <dra992@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/davidrebollo92/time/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@parcel/packager-ts": "^2.10.3",
+    "@parcel/transformer-typescript-types": "^2.10.3",
+    "parcel": "^2.10.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.2"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
+  "homepage": "https://github.com/davidrebollo92/time#readme"
+}
