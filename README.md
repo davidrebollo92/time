@@ -33,7 +33,7 @@ clone()
 ### Example
 
 ```js
-import Time from "@davidrebollo92/time";
+import { Time } from "@davidrebollo92/time";
 
 // Create a Time instance
 const dateNow = new Time();
