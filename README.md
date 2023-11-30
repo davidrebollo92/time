@@ -13,7 +13,7 @@ Extended version of Date with more features
 The package adds the following functions:
 
 ```js
-isValid(date: string)
+isValid()
 day()
 daysInMonth()
 month()
