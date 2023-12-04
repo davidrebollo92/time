@@ -120,17 +120,13 @@ class $882b6d93070905b3$export$680ea196effce5f extends Date {
         if (!separator) separator = "";
         switch(rule){
             case "YYYYMMDD":
-                this.year().toString(), this.month().toString(), this.day().toString();
-                break;
+                return this.year().toString() + separator + this.month().toString() + separator + this.day().toString();
             case "DDMMYYYY":
-                this.day().toString(), this.month().toString(), this.year().toString();
-                break;
+                return this.day().toString() + separator + this.month().toString() + separator + this.year().toString();
             case "YYMMDD":
-                this.year().toString().substring(2), this.month().toString(), this.day().toString();
-                break;
+                return this.year().toString().substring(2) + separator + this.month().toString() + separator + this.day().toString();
             case "DDMMYY":
-                this.day().toString(), this.month().toString(), this.year().toString().substring(2);
-                break;
+                return this.day().toString() + separator + this.month().toString() + separator + this.year().toString().substring(2);
         }
     }
     diffInMinutes(date) {

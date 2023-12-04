@@ -141,25 +141,27 @@ export class Time extends Date {
 
       switch (rule) {
          case "YYYYMMDD":
-            this.year().toString() + separator + this.month().toString() + separator + this.day().toString();
-            break;
+            return this.year().toString() + separator + this.month().toString() + separator + this.day().toString();
          case "DDMMYYYY":
-            this.day().toString() + separator + this.month().toString() + separator + this.year().toString();
-            break;
+            return this.day().toString() + separator + this.month().toString() + separator + this.year().toString();
+
          case "YYMMDD":
-            this.year().toString().substring(2) +
+            return (
+               this.year().toString().substring(2) +
                separator +
                this.month().toString() +
                separator +
-               this.day().toString();
-            break;
+               this.day().toString()
+            );
+
          case "DDMMYY":
-            this.day().toString() +
+            return (
+               this.day().toString() +
                separator +
                this.month().toString() +
                separator +
-               this.year().toString().substring(2);
-            break;
+               this.year().toString().substring(2)
+            );
       }
    }
 
