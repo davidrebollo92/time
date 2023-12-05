@@ -15,7 +15,7 @@ export class Time extends Date {
     isBetween(startDate: Time | string, endDate: Time | string, rule: "()" | "(]" | "[)" | "[]"): boolean;
     diff(date: Time | string, unit: "minutes" | "days" | "months" | "years"): number;
     clone(): Time;
-    format(rule: "YYYYMMDD" | "DDMMYYYY" | "YYMMDD" | "DDMMYY", separator?: "" | "-" | "/"): void;
+    format(rule: "YYYYMMDD" | "DDMMYYYY" | "YYMMDD" | "DDMMYY", separator?: "" | "-" | "/"): string;
 }
 
 //# sourceMappingURL=index.d.ts.map

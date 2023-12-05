@@ -139,27 +139,19 @@ export class Time extends Date {
    format(rule: "YYYYMMDD" | "DDMMYYYY" | "YYMMDD" | "DDMMYY", separator?: "" | "-" | "/") {
       if (!separator) separator = "";
 
+      const day = this.day() > 9 ? this.day().toString() : 0 + this.day().toString();
+      const month = this.month() > 9 ? this.month().toString() : 0 + this.month().toString();
+      const year = this.year().toString();
+
       switch (rule) {
          case "YYYYMMDD":
-            return this.year().toString() + separator + this.month().toString() + separator + this.day().toString();
+            return year + separator + month + separator + day;
          case "DDMMYYYY":
-            return this.day().toString() + separator + this.month().toString() + separator + this.year().toString();
+            return day + separator + month + separator + year;
          case "YYMMDD":
-            return (
-               this.year().toString().substring(2) +
-               separator +
-               this.month().toString() +
-               separator +
-               this.day().toString()
-            );
+            return year.substring(2) + separator + month + separator + day;
          case "DDMMYY":
-            return (
-               this.day().toString() +
-               separator +
-               this.month().toString() +
-               separator +
-               this.year().toString().substring(2)
-            );
+            return day + separator + month + separator + year.substring(2);
       }
    }
 
