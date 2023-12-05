@@ -11,15 +11,15 @@ export class Time extends Date {
    }
 
    day() {
-      return this.getDay();
+      return this.getDate();
    }
 
    daysInMonth() {
-      return new Date(this.year(), this.month() + 1, 0).getDate();
+      return new Date(this.year(), this.month(), 0).getDate();
    }
 
    month() {
-      return this.getMonth();
+      return this.getMonth() + 1;
    }
 
    year() {
@@ -144,7 +144,6 @@ export class Time extends Date {
             return this.year().toString() + separator + this.month().toString() + separator + this.day().toString();
          case "DDMMYYYY":
             return this.day().toString() + separator + this.month().toString() + separator + this.year().toString();
-
          case "YYMMDD":
             return (
                this.year().toString().substring(2) +
@@ -153,7 +152,6 @@ export class Time extends Date {
                separator +
                this.day().toString()
             );
-
          case "DDMMYY":
             return (
                this.day().toString() +

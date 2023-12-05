@@ -15,13 +15,13 @@ class $882b6d93070905b3$export$680ea196effce5f extends Date {
         return !isNaN(this.getTime());
     }
     day() {
-        return this.getDay();
+        return this.getDate();
     }
     daysInMonth() {
-        return new Date(this.year(), this.month() + 1, 0).getDate();
+        return new Date(this.year(), this.month(), 0).getDate();
     }
     month() {
-        return this.getMonth();
+        return this.getMonth() + 1;
     }
     year() {
         return this.getFullYear();
