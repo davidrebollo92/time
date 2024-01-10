@@ -11,7 +11,7 @@ export class Time extends Date {
    }
 
    day() {
-      return this.getDate();
+      return this.getUTCDate();
    }
 
    daysInMonth() {
@@ -19,11 +19,11 @@ export class Time extends Date {
    }
 
    month() {
-      return this.getMonth() + 1;
+      return this.getUTCMonth() + 1;
    }
 
    year() {
-      return this.getFullYear();
+      return this.getUTCFullYear();
    }
 
    startOfDay() {
