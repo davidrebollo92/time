@@ -27,10 +27,10 @@ class $882b6d93070905b3$export$680ea196effce5f extends Date {
         return this.getUTCFullYear();
     }
     startOfDay() {
-        this.setHours(0);
-        this.setMinutes(0);
-        this.setSeconds(0);
-        this.setMilliseconds(0);
+        if (this.getHours() > 0) this.setHours(0);
+        if (this.getMinutes() > 0) this.setMinutes(0);
+        if (this.getSeconds() > 0) this.setSeconds(0);
+        if (this.getMilliseconds() > 0) this.setMilliseconds(0);
         return this;
     }
     add(amount, unit) {
