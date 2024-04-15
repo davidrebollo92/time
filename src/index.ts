@@ -27,12 +27,7 @@ export class Time extends Date {
    }
 
    startOfDay() {
-      if (this.getHours() > 0) this.setHours(0);
-      if (this.getMinutes() > 0) this.setMinutes(0);
-      if (this.getSeconds() > 0) this.setSeconds(0);
-      if (this.getMilliseconds() > 0) this.setMilliseconds(0);
-
-      return this;
+      return new Time(new Date(this.format("YYYYMMDD", "-")));
    }
 
    add(amount: number, unit: "days" | "months" | "years") {

@@ -5,7 +5,7 @@ export class Time extends Date {
     daysInMonth(): number;
     month(): number;
     year(): number;
-    startOfDay(): this;
+    startOfDay(): Time;
     add(amount: number, unit: "days" | "months" | "years"): this;
     subtract(amount: number, unit: "days" | "months" | "years"): this;
     isBefore(date: Time | string): boolean;
